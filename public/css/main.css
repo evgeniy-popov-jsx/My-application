@@ -227,8 +227,9 @@ body {
     z-index: 21;
 }
 .main_content {
-    height: 100%;
-    padding: 30px;
+    height: max-content;
+    width: fit-content;
+    padding: 90px 50px;
     border-radius: 48px;
     background: #2d1a70;
     box-shadow: 
@@ -284,3 +285,26 @@ body {
     padding-left: 20px;
     border-left: 1px var(--accent) solid;
 }
+/* Стили для городов */
+.city-btn {
+    display: flex;   
+    max-width: 750px;
+    flex-wrap: wrap;
+}
+.city-btn button {
+    color: var(--textColor);
+    margin-left: 20px;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    transition: all .2s;
+    border: 1px solid var(--bgColor);
+    border-radius: 25px;
+    background: #2d1a70;
+}
+
+button:active {
+    border-radius: 30px;
+    background: #2d1a70;
+    box-shadow: inset 9px 9px 15px #241558,
+                inset -9px -9px 15px #361f88;
+   }

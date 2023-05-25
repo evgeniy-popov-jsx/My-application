@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react"
+import { useState } from "react";
 import { Weather } from "../weather/weather";
 
 const MemoizedWeather = React.memo(Weather);
@@ -21,31 +21,31 @@ export const Sidebar: React.FC = () => {
                 <ul className="nav_list">
                     <li>
                         <a href="#">
-                            <i className='bx bx-user-circle' ></i>
-                            <span className="links_name">Weather</span>
+                            <i className='bx bx-cloud-lightning' ></i>
+                            <span className="links_name">Weather Api</span>
                         </a>
                         <span className="tooltip">Weather</span>
                     </li>
                     <li>
                         <a href="#">
                             <i className='bx bx-message' ></i>
-                            <span className="links_name">Messaage</span>
+                            <span className="links_name">Develop</span>
                         </a>
-                        <span className="tooltip">Messaage</span>
+                        <span className="tooltip">Develop</span>
                     </li>
                     <li>
                         <a href="#">
                             <i className='bx bx-bar-chart-square' ></i>
-                            <span className="links_name">Chart</span>
+                            <span className="links_name">Develop</span>
                         </a>
-                        <span className="tooltip">Chart</span>
+                        <span className="tooltip">Develop</span>
                     </li>
                     <li>
                         <a href="#">
                             <i className='bx bx-stats' ></i>
-                            <span className="links_name">Stats</span>
+                            <span className="links_name">Develop</span>
                         </a>
-                        <span className="tooltip">Stats</span>
+                        <span className="tooltip">Develop</span>
                     </li>
                 </ul>
                 <div className="profile_content">
