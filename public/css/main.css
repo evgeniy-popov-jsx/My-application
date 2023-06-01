@@ -227,14 +227,19 @@ body {
     z-index: 21;
 }
 .main_content {
-    height: max-content;
-    width: fit-content;
+    height: fit-content;
+    width: 100%;
     padding: 90px 50px;
     border-radius: 48px;
     background: #2d1a70;
     box-shadow: 
             inset 21px 21px 42px #241558,
             inset -21px -21px 42px #361f88;
+}
+@media (max-width: 940px) {
+  .main_content {
+    height: max-content;
+  }
 }
 /* Стили для карточек с погодой */
 
@@ -466,3 +471,119 @@ button:active {
       transform: scale(2.5);
     }
   }
+
+  /* Стили для Users */
+.card_list {
+  display: flex;
+  flex-wrap: wrap; 
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 30px;
+  width: 200px;
+  height: 300px;
+  border-radius: 50px;
+  background: #2d1a70;
+  box-shadow:  -14px -14px 28px #190f3f,
+             14px 14px 28px #4125a1;
+}
+.card .card_photo {
+  margin-bottom: 10px;
+  max-width: 60%;
+  
+}
+.card .card_photo img {
+  width: 100%;
+  border-radius: 40%;
+  
+}
+.card .card_name {
+  font-size: 16px;
+  color: var(--textColor);
+}
+.card .card_job {
+  font-size: 12px;
+  color: var(--textColor);
+  margin-bottom: 50px;
+}
+
+/* Стили для кнопок */
+.btn {
+  position: relative;
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+}
+.btn.del {
+  position: relative;
+  width: 150px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #6f2525;
+  background-color: #8d3440;
+}
+.btn, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+.btn .button__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+.btn .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #34974d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn.del .button__icon {
+  background-color: #802929;
+}
+.btn .svg {
+  width: 30px;
+  stroke: #fff;
+}
+.btn:hover {
+  background: #34974d;
+}
+.btn.del:hover {
+  background: #c43e3e;
+}
+
+.btn:hover .button__text {
+  color: transparent;
+}
+
+.btn:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.btn:active .button__icon {
+  background-color: #2e8644;
+}
+.btn.del:active .button__icon {
+  background-color: #471b1b;
+}
+
+.btn:active {
+  border: 1px solid #2e8644;
+}
+.btn.del:active {
+  border: 1px solid #471b1b;
+}

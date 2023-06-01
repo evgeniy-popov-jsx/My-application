@@ -1,15 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import { Weather } from "../weather/weather";
-
-const MemoizedWeather = React.memo(Weather);
+import { Link } from "react-router-dom";
 
 export const Sidebar: React.FC = () => {
     const [activeState, setActiveState] = useState<boolean>(true)
     const isToggle = () => setActiveState((prev) => !prev);
     
     return (
-        <div className="shell">
             <div className={`sidebar ${activeState ? 'active' : ''}`}>
                 <div className="logo_content">
                     <div className="logo">
@@ -20,32 +17,18 @@ export const Sidebar: React.FC = () => {
                 </div>  
                 <ul className="nav_list">
                     <li>
-                        <a href="#">
+                        <Link to={`/Weather`}>
                             <i className='bx bx-cloud-lightning' ></i>
                             <span className="links_name">Weather Api</span>
-                        </a>
+                        </Link>
                         <span className="tooltip">Weather</span>
                     </li>
                     <li>
-                        <a href="#">
-                            <i className='bx bx-message' ></i>
-                            <span className="links_name">Develop</span>
-                        </a>
-                        <span className="tooltip">Develop</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i className='bx bx-bar-chart-square' ></i>
-                            <span className="links_name">Develop</span>
-                        </a>
-                        <span className="tooltip">Develop</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i className='bx bx-stats' ></i>
-                            <span className="links_name">Develop</span>
-                        </a>
-                        <span className="tooltip">Develop</span>
+                        <Link to={`/Users`}>
+                            <i className='bx bx-user-circle' ></i>
+                            <span className="links_name">Users</span>
+                        </Link> 
+                        <span className="tooltip">Users</span>
                     </li>
                 </ul>
                 <div className="profile_content">
@@ -61,13 +44,5 @@ export const Sidebar: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="home_content">
-                <div className="header"></div>
-                <div className="text">
-                    Weather
-                </div>
-               <MemoizedWeather />
-            </div>
-        </div>
     )
 }

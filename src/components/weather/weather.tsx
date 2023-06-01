@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { WeatherCard } from "../weather-card/Weather-card"
+import { WeatherCard } from "./weather-card/Weather-card"
 import { CITY } from "../../mocks/city";
 
 type City = {
@@ -11,9 +11,9 @@ type City = {
 
 export const Weather: React.FC = () => {
     const [ city, setCity ] = useState<City>(CITY[0]);
-    console.log(city)
+    
     return (
-        <div className="main_content">
+        <>
             <WeatherCard 
                 id={city.id} 
                 name={city.name} 
@@ -21,13 +21,11 @@ export const Weather: React.FC = () => {
                 lon={city.lon} />
                 <ul className="city-btn">
                     {CITY.map(city => (
-                        <button className='button'
-                            key={city.id}
-                            onClick={()=>setCity(city)}>
-                                {city.name}
-                            </button>
+                        <button className='button' key={city.id} onClick={()=>setCity(city)}>
+                            {city.name}
+                        </button>
                     ))}
-            </ul>
-        </div>
+                </ul>
+        </>
     )
 }
