@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { WeatherCardRender } from "./Weather-card-render";
-import { Loader } from "../loader/loader";
+import { Loader } from "../../loader/loader";
 
 type WeatherProps = {
     id: number,

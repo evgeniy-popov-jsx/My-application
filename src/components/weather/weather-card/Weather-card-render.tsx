@@ -1,5 +1,5 @@
-import weatherConvert from "../../utils/weather_converter";
-import { getDay, getMonth } from "../../utils/date";
+import weatherConvert from "../../../utils/weather_converter";
+import { getDay, getMonth } from "../../../utils/date";
 
 type WeatherCardProps = {
     feels_like: number;
